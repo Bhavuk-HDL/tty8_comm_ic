@@ -62,7 +62,7 @@ module comm_ic (
 	output	wire			busy_uart,	// Busy from UART Tx
 	output	wire			busy_spi,	// Busy from SPI
 	output	wire			busy_i2c,	// Busy from I2C
-	output	wire			error_i2c;	// Error I2C
+	output	wire			error_i2c,	// Error I2C
 	
 	// Data load in comm_ic
 	input	wire	[3:0]	data_in,	// Data in for IC;			inout[4:1]
