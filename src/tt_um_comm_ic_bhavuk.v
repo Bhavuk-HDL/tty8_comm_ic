@@ -30,6 +30,6 @@ module tt_um_comm_ic_bhavuk (
 			  .SEN(uo_out[1]), .SCLK(uo_out[2]), .MOSI(uo_out[3]), .MISO(ui_in[1]),
 			  .SCL(uo_out[4]), .SDA_in(uio_in[0]), .SDA_out(uio_out[0]), .SDA_op_en(uio_oe[0]),
 			  .busy_uart(uo_out[5]), .busy_spi(uo_out[6]), .busy_i2c(uo_out[7]), .new_uart(uio_out[1]), .error_i2c(uio_out[6]),
-			  .data_in(uio_in[5:2]), data_out(uio_out[5:2]), data_op_en(uio_oe[5:2]), .data_en(ui_in[2]));
+			  .data_in(uio_in[5:2]), .data_out(uio_out[5:2]), .data_op_en(uio_oe[5:2]), .data_en(ui_in[2]));
 			  
 endmodule
