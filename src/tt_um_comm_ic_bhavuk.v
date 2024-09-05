@@ -17,7 +17,7 @@ module tt_um_comm_ic_bhavuk (
 	);
 
 	// All output pins must be assigned. If not used, assign to 0.
-	assign uio_out[7] = 1'b0;
+	assign uio_out[7] = clk;
 	assign uio_oe[1]  = 1'b1;
 	assign uio_oe[6]  = 1'b1;
 	assign uio_oe[7]  = 1'b1;
