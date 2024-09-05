@@ -17,13 +17,13 @@ module tt_um_comm_ic_bhavuk (
 	);
 
 	// All output pins must be assigned. If not used, assign to 0.
-	assign uio_out[7] = clk;
+	assign uio_out[7] = ui_in[3] ? clk : 1'b0;
 	assign uio_oe[1]  = 1'b1;
 	assign uio_oe[6]  = 1'b1;
 	assign uio_oe[7]  = 1'b1;
 
 	// List all unused inputs to prevent warnings
-	wire _unused = &{ena, ui_in[7:3], uio_in[1], uio_in[7:6]};
+	wire _unused = &{ena, ui_in[7:4], uio_in[1], uio_in[7:6]};
 	
 	comm_ic comm_ic0 (.clk(clk), .reset_n(rst_n), 
 			  .UART_RX(ui_in[0]), .UART_TX(uo_out[0]),
